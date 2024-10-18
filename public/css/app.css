@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #31A9E5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar {
+    position: relative;
+    background-color: #232f34;
+    padding: 20px;
+    color: white;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    position: relative;
+    left: 0px;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    grid-area: content;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #344955;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.auth-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form input, .auth-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.auth-form button {
+    background-color: #344955;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background-color: #232f34;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #344955;
+    color: white;
+}
+
+.alert-success {
+    color: green;
+    margin-bottom: 20px;
+} 
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+nav .logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
